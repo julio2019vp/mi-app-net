@@ -1,0 +1,12 @@
+name: Execute Application Pipeline
+
+   on:
+     push:
+       branches: [ "main" ]
+
+   jobs:
+     call-devops-template:
+       uses: julio2019vp/mi-infra-templates/.github/workflows/ci-cd-template.yml@main
+       secrets:
+         AZURE_REGISTRY_USERNAME: ${{ secrets.ACR_USERNAME }}
+         AZURE_REGISTRY_PASSWORD: ${{ secrets.ACR_PASSWORD }}
