@@ -1,0 +1,6 @@
+@mi_app_net_HostAddress = http://localhost:5215
+
+GET {{mi_app_net_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
